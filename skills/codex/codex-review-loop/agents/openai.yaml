@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Review Loop"
+  short_description: "Run Codex review closeout checks"
+  default_prompt: "Use $codex-review-loop to run a closeout review loop on this branch and report accepted findings."

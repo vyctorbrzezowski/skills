@@ -1,0 +1,4 @@
+interface:
+  display_name: "Playground Oracle"
+  short_description: "Consult frontier models for hard calls"
+  default_prompt: "Use $playground-oracle to consult the AI SDK Playground before deciding on this difficult code or product question."

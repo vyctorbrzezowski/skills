@@ -1,6 +1,6 @@
 # skills
 
-Personal LLM agent skills I use, tweak, and share with friends and colleagues.
+Personal agent skills I use, tweak, and share with friends and colleagues.
 
 This is not a framework or a manifesto. It is a small public shelf for prompts, skills, and agent workflows that are useful enough to reuse.
 
@@ -8,7 +8,9 @@ The goal is simple: keep the agent moving in the style I want, make good workflo
 
 ## What's here
 
-- [`skills/codex/codex-run-to-completion`](skills/codex/codex-run-to-completion/SKILL.md): asks Codex to keep going through routine choices, waits, tests, and verification instead of stopping for avoidable confirmations.
+- [`codex-run-to-completion`](skills/codex/codex-run-to-completion/SKILL.md): asks Codex to keep going through routine choices, waits, tests, and verification instead of stopping for avoidable confirmations.
+- [`playground-oracle`](skills/codex/playground-oracle/SKILL.md): uses the Vercel AI SDK Playground as a cheap outside oracle for hard calls, proof-checking, plan review, and adversarial reasoning.
+- [`codex-review-loop`](skills/codex/codex-review-loop/SKILL.md): runs Codex review as an advisory closeout loop, verifies findings, fixes the real ones, and repeats until clean.
 
 ## Install
 
@@ -24,7 +26,7 @@ For Codex:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R skills/codex/codex-run-to-completion ~/.codex/skills/
+cp -R skills/codex/* ~/.codex/skills/
 ```
 
 For agents that support `SKILL.md`, the important file is always inside the skill directory.
@@ -36,6 +38,8 @@ For agents that support `SKILL.md`, the important file is always inside the skil
 Skills that depend on Codex behavior or OpenAI agent metadata.
 
 - [`codex-run-to-completion`](skills/codex/codex-run-to-completion/SKILL.md): run a task end to end without stopping for avoidable confirmations, including long waits, terminal polling, verification, and concise closeout.
+- [`playground-oracle`](skills/codex/playground-oracle/SKILL.md): ask frontier models in the AI SDK Playground for a second opinion without burning Codex quota. Useful for architecture calls, tricky reviews, plan stress-tests, proof-checking, and reasoning checks. It is inspired by [`steipete/oracle`](https://github.com/steipete/oracle), but aimed at a lower-cost browser-playground workflow.
+- [`codex-review-loop`](skills/codex/codex-review-loop/SKILL.md): run `codex review`, treat the output as advisory, verify each finding locally, apply only real fixes, rerun tests, and review again.
 
 ## Shape
 
