@@ -2,15 +2,23 @@
 
 Personal LLM agent skills I use, tweak, and share with friends and colleagues.
 
-This is not a framework or a manifesto. It is a small public shelf for prompts, skills, and agent workflows that have been useful enough to keep.
+This is not a framework or a manifesto. It is a small public shelf for prompts, skills, and agent workflows that are useful enough to reuse.
+
+The goal is simple: keep the agent moving in the style I want, make good workflows easy to copy, and avoid re-explaining the same operating rules every time.
 
 ## What's here
 
 - [`skills/codex/codex-run-to-completion`](skills/codex/codex-run-to-completion/SKILL.md): asks Codex to keep going through routine choices, waits, tests, and verification instead of stopping for avoidable confirmations.
 
-## How to use a skill
+## Install
 
-Copy a skill directory into the skills folder for the agent you use.
+With `skills.sh`:
+
+```bash
+npx skills@latest add vyctorbrzezowski/skills
+```
+
+Or copy one skill manually.
 
 For Codex:
 
@@ -20,6 +28,14 @@ cp -R skills/codex/codex-run-to-completion ~/.codex/skills/
 ```
 
 For agents that support `SKILL.md`, the important file is always inside the skill directory.
+
+## Reference
+
+### Codex
+
+Skills that depend on Codex behavior or OpenAI agent metadata.
+
+- [`codex-run-to-completion`](skills/codex/codex-run-to-completion/SKILL.md): run a task end to end without stopping for avoidable confirmations, including long waits, terminal polling, verification, and concise closeout.
 
 ## Shape
 
