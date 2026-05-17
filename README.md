@@ -6,7 +6,7 @@ This is not a framework or a manifesto. It is a small public shelf for prompts, 
 
 ## What's here
 
-- [`skills/codex-run-to-completion`](skills/codex-run-to-completion/SKILL.md): asks Codex to keep going through routine choices, waits, tests, and verification instead of stopping for avoidable confirmations.
+- [`skills/codex/codex-run-to-completion`](skills/codex/codex-run-to-completion/SKILL.md): asks Codex to keep going through routine choices, waits, tests, and verification instead of stopping for avoidable confirmations.
 
 ## How to use a skill
 
@@ -16,7 +16,7 @@ For Codex:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R skills/codex-run-to-completion ~/.codex/skills/
+cp -R skills/codex/codex-run-to-completion ~/.codex/skills/
 ```
 
 For agents that support `SKILL.md`, the important file is always inside the skill directory.
@@ -25,10 +25,14 @@ For agents that support `SKILL.md`, the important file is always inside the skil
 
 ```text
 skills/
-  skill-name/
-    SKILL.md
-    agents/
-      openai.yaml
+  codex/
+    skill-name/
+      SKILL.md
+      agents/
+        openai.yaml
+  generic/
+    skill-name/
+      SKILL.md
 ```
 
 Some skills may include scripts, references, or templates when that makes the skill easier to reuse. Most should stay small.
