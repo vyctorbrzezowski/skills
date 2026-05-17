@@ -8,6 +8,8 @@ The goal is simple: keep the agent moving in the style I want, make good workflo
 
 ## What's here
 
+- [`session-brief`](skills/session-brief/SKILL.md): dumps a compact session context summary directly in chat.
+- [`session-migrate`](skills/session-migrate/SKILL.md): creates a pasteable handoff prompt for continuing the session in a new chat.
 - [`codex-run-to-completion`](skills/codex/codex-run-to-completion/SKILL.md): asks Codex to keep going through routine choices, waits, tests, and verification instead of stopping for avoidable confirmations.
 - [`playground-oracle`](skills/codex/playground-oracle/SKILL.md): uses the Vercel AI SDK Playground as a cheap outside oracle for hard calls, proof-checking, plan review, and adversarial reasoning.
 - [`codex-review-loop`](skills/codex/codex-review-loop/SKILL.md): runs Codex review as an advisory closeout loop, verifies findings, fixes the real ones, and repeats until clean.
@@ -26,12 +28,20 @@ For Codex:
 
 ```bash
 mkdir -p ~/.codex/skills
+cp -R skills/session-brief skills/session-migrate ~/.codex/skills/
 cp -R skills/codex/* ~/.codex/skills/
 ```
 
 For agents that support `SKILL.md`, the important file is always inside the skill directory.
 
 ## Reference
+
+### General
+
+Portable skills that only depend on the conversation context.
+
+- [`session-brief`](skills/session-brief/SKILL.md): produce a compact context dump in chat for the current session. Use it when the chat is bloated, slow, or the user wants the current state without opening files.
+- [`session-migrate`](skills/session-migrate/SKILL.md): produce a copyable prompt for a new chat, with the goal, completed work, remaining work, current state, files, constraints, and suggested skills.
 
 ### Codex
 
