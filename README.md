@@ -1,4 +1,4 @@
-# llms
+# skills
 
 Personal LLM agent skills I use, tweak, and share with friends and colleagues.
 
@@ -25,14 +25,13 @@ For agents that support `SKILL.md`, the important file is always inside the skil
 
 ```text
 skills/
+  skill-name/
+    SKILL.md
   codex/
     skill-name/
       SKILL.md
       agents/
         openai.yaml
-  generic/
-    skill-name/
-      SKILL.md
 ```
 
 Some skills may include scripts, references, or templates when that makes the skill easier to reuse. Most should stay small.
