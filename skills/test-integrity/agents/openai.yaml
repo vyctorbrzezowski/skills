@@ -1,0 +1,4 @@
+interface:
+  display_name: "Test Integrity"
+  short_description: "Behavior-first tests that catch regressions"
+  default_prompt: "Use $test-integrity to design or review tests for this change."
