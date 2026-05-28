@@ -1,9 +1,9 @@
 ---
-name: test-integrity
+name: write-better-tests
 description: Use when Codex is adding, editing, selecting, reviewing, or explaining tests in any repository, including mocks, fixtures, snapshots, CI validation, regression coverage, TDD/red-green proof, or readiness claims. Enforces behavior-first test design so tests catch real regressions instead of merely passing the current implementation.
 ---
 
-# Test Integrity
+# Write Better Tests
 
 Use this skill whenever test quality matters. The goal is not "more tests"; the goal is tests a skeptical maintainer would trust.
 
