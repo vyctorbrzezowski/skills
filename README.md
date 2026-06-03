@@ -10,6 +10,7 @@ The goal is simple: keep the agent moving in the style I want, make good workflo
 
 - [`session-brief`](skills/session-brief/SKILL.md): dumps a compact session context summary directly in chat.
 - [`session-migrate`](skills/session-migrate/SKILL.md): creates a pasteable handoff prompt for continuing the session in a new chat.
+- [`audio-native-article`](skills/audio-native-article/SKILL.md): turns articles into listener-first audio narration packages instead of literal transcripts.
 - [`write-better-tests`](skills/write-better-tests/SKILL.md): designs and reviews behavior-first tests that catch real regressions instead of only passing the current implementation.
 - [`codex-run-to-completion`](skills/codex/codex-run-to-completion/SKILL.md): asks Codex to keep going through routine choices, waits, tests, and verification instead of stopping for avoidable confirmations.
 - [`playground-oracle`](skills/codex/playground-oracle/SKILL.md): consults Opus 4.7 and GPT-5.5-Pro in the Vercel AI SDK Playground as a cheap outside oracle for hard calls, proof-checking, plan review, and adversarial reasoning.
@@ -30,7 +31,7 @@ For Codex:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R skills/session-brief skills/session-migrate skills/write-better-tests ~/.codex/skills/
+cp -R skills/session-brief skills/session-migrate skills/audio-native-article skills/write-better-tests ~/.codex/skills/
 cp -R skills/codex/* ~/.codex/skills/
 ```
 
@@ -44,6 +45,7 @@ Portable skills that only depend on the conversation context.
 
 - [`session-brief`](skills/session-brief/SKILL.md): produce a compact context dump in chat for the current session. Use it when the chat is bloated, slow, or the user wants the current state without opening files.
 - [`session-migrate`](skills/session-migrate/SKILL.md): produce a copyable prompt for a new chat, with the goal, completed work, remaining work, current state, files, constraints, and suggested skills.
+- [`audio-native-article`](skills/audio-native-article/SKILL.md): transform articles, docs, newsletters, or essays into audio-native TTS packages that account for images, charts, tables, screenshots, code, headings, and listener pacing.
 - [`write-better-tests`](skills/write-better-tests/SKILL.md): design or review tests around real product/code contracts, require red-green proof when practical, and reject convenient mocks, fixtures, snapshots, and assertions that would not catch the regression.
 
 ### Codex
