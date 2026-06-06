@@ -1,0 +1,32 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Session Continuity",
+      "description": "Skills for summarizing, migrating, and recovering long Codex sessions.",
+      "skills": [
+        "session-brief",
+        "session-migrate",
+        "codex-session-image-scrubber"
+      ]
+    },
+    {
+      "title": "Codex Workflow",
+      "description": "Skills for autonomous runs, review loops, and second-model reasoning.",
+      "skills": [
+        "codex-run-to-completion",
+        "codex-review-loop",
+        "playground-oracle"
+      ]
+    },
+    {
+      "title": "Writing & Quality",
+      "description": "Skills for audio-native writing and behavior-first test design.",
+      "skills": [
+        "audio-native-article",
+        "write-better-tests"
+      ]
+    }
+  ]
+}
